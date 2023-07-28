@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('https://www.toptal.com/designers/subtlepatterns/uploads/white_wall_hash.png');
+    background-position: 0 0;
+    font-size: "Raleway", "sans-serif";
+}
+
+section img {
+    width: 50%;
+}
+
+.gallery {
+    width: 200px;
+}
+
+.conocenos {
+    width: 100px;
+}
+
+header .logo {
+    width: 150px;
+}
+
+header {
+    background-color: antiquewhite;
+    font-size: 30px;
+}
+
+header img {
+    width: 100px;
+    height: 100px;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+footer {
+    background-color: azure;
+    font-size: .5rem;
+}
+    
+footer img {
+    width: 30px;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 300px; 
+    background-color: #f3f3f3f2; 
+  }
+  
+  .flex-item {
+    margin: 10px; 
+    padding: 20px; 
+    background-color: #dad;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    grid-gap: 12px; 
+  }
+  
+  .grid-item img {
+    width: 100%;
+    height: auto;
+  }
+
+

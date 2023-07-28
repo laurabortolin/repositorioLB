@@ -1,0 +1,128 @@
+$primary-color: #007bff;
+$background-color: #d2e8ff;
+$secondary-color: #f3c0ca;    
+$text-color: #333;            
+$font-family: Arial, sans-serif;
+
+@mixin fade-in-animation($duration: 0.5s) {
+  animation: fade-in $duration;
+}
+
+@mixin button-style($background-color, $text-color){
+  background-color: $background-color;
+  color: $text-color;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+  
+  &:hover {
+    background-color: darken($background-color, 10%);
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+h1 {
+  font-size: 24px;
+  color: darken($primary-color, 20%);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $font-family;
+  color: $text-color;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header {
+  background-color: $primary-color;
+  padding: 10px;
+  color: #fff; 
+
+  h1 {
+    font-size: 36px;
+    margin: 0;
+  }
+
+  p {
+    font-size: 18px;
+    margin: 5px 0;
+  }
+}
+
+.navbar {
+  background-color: $secondary-color;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      display: inline-block;
+      margin-right: 20px;
+
+      a {
+        text-decoration: none;
+        color: #fff; 
+        transition: color 0.2s;
+
+        &:hover {
+          color: $primary-color;
+        }
+      }
+    }
+  }
+}
+
+.main-content {
+  padding: 20px;
+
+  h2 {
+    font-size: 24px;
+    margin: 0;
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .highlight {
+    background-color: $secondary-color;
+    padding: 5px;
+    border-radius: 5px;
+  }
+}
+
+.btn-primary {
+  @include button-style($background-color, $text-color);
+}
+
+.footer {
+  background-color: $primary-color;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+
+  p {
+    font-size: 14px;
+    margin: 0;
+  }
+}
