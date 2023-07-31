@@ -1,0 +1,56 @@
+header {
+    width: 100%;
+    background: url('../images/lv_20.jpg') no-repeat $header-background-color center right;
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    box-shadow: 0 0 44px $shadow-color;
+
+    .navbar {
+        .navbar-nav {
+            .nav-item {
+                .nav-link {
+                    display: inline-block;
+                }
+
+                &:after {
+                    content: "●";
+                    margin-right: .5em;
+                }
+
+                &:last-child {
+                    &:after {
+                        content: "";
+                    }
+                }
+            }
+        }
+    }
+
+    .logo {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+/* Responsive */
+@media only screen and (max-width: 580px){
+    header {
+        background-image: none;
+        flex-flow: row-reverse;
+        justify-content: space-between;
+
+        .navbar {
+            .navbar-nav {
+                .nav-item {
+                    &:after {
+                        content: "";
+                    }
+                }
+            }
+        }
+    }
+}

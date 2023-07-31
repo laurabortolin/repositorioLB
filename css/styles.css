@@ -1,3 +1,41 @@
+@charset "UTF-8";
+header {
+  width: 100%;
+  background: url("../images/lv_20.jpg") no-repeat #F8F9FA center right;
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  box-shadow: 0 0 44px #e4e4e4;
+}
+header .navbar .navbar-nav .nav-item .nav-link {
+  display: inline-block;
+}
+header .navbar .navbar-nav .nav-item:after {
+  content: "●";
+  margin-right: 0.5em;
+}
+header .navbar .navbar-nav .nav-item:last-child:after {
+  content: "";
+}
+header .logo {
+  width: 100px;
+  height: 100px;
+}
+
+/* Responsive */
+@media only screen and (max-width: 580px) {
+  header {
+    background-image: none;
+    flex-flow: row-reverse;
+    justify-content: space-between;
+  }
+  header .navbar .navbar-nav .nav-item:after {
+    content: "";
+  }
+}
 h1 {
   font-size: 24px;
   color: #004a99;
@@ -9,68 +47,9 @@ body {
   font-family: Arial, sans-serif;
   color: #333;
 }
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-.header {
-  background-color: #007bff;
-  padding: 10px;
-  color: #fff;
-}
-.header h1 {
-  font-size: 36px;
-  margin: 0;
-}
-.header p {
-  font-size: 18px;
-  margin: 5px 0;
-}
-
-.navbar {
-  background-color: #f3c0ca;
-  padding: 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.navbar ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-.navbar ul li {
-  display: inline-block;
-  margin-right: 20px;
-}
-.navbar ul li a {
-  text-decoration: none;
-  color: #fff;
-  transition: color 0.2s;
-}
-.navbar ul li a:hover {
-  color: #007bff;
-}
-
-.main-content {
-  padding: 20px;
-}
-.main-content h2 {
-  font-size: 24px;
-  margin: 0;
-  margin-bottom: 10px;
-}
-.main-content p {
-  font-size: 16px;
-  line-height: 1.6;
-}
-.main-content .highlight {
-  background-color: #f3c0ca;
-  padding: 5px;
-  border-radius: 5px;
+body .container {
+  margin-top: 125px;
+  margin-bottom: 70px;
 }
 
 .btn-primary {
@@ -90,15 +69,31 @@ body {
   outline: none;
 }
 
-.footer {
-  background-color: #007bff;
-  color: #fff;
-  text-align: center;
-  padding: 10px;
+.consultas {
+  max-width: 500px;
 }
-.footer p {
-  font-size: 14px;
-  margin: 0;
+
+/* Responsive */
+@media only screen and (max-width: 580px) {
+  .consultas {
+    max-width: 100%;
+  }
+}
+.image-gallery {
+  max-width: 700px;
+  margin: 2em auto;
+}
+
+footer {
+  width: 100%;
+  background-color: #F8F9FA;
+  position: fixed;
+  bottom: 0;
+}
+footer p {
+  margin: 10px 0;
+  text-align: center;
+  font-size: 0.8em;
 }
 
 /*# sourceMappingURL=styles.css.map */

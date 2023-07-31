@@ -1,36 +1,23 @@
+
+
 $primary-color: #007bff;
-$background-color: #d2e8ff;
-$secondary-color: #f3c0ca;    
-$text-color: #333;            
-$font-family: Arial, sans-serif;
 
-@mixin fade-in-animation($duration: 0.5s) {
-  animation: fade-in $duration;
-}
-
-@mixin button-style($background-color, $text-color){
-  background-color: $background-color;
-  color: $text-color;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-  transition: background-color 0.3s;
-  
-  &:hover {
-    background-color: darken($background-color, 10%);
-  }
-
-  &:focus {
-    outline: none;
-  }
+body {
+  font-family: Arial, sans-serif;
+  color: $primary-color;
 }
 
 h1 {
   font-size: 24px;
   color: darken($primary-color, 20%);
 }
+
+
+$primary-color: #68b0ab;      
+$secondary-color: #f3c0ca;    
+$text-color: #333;            
+$font-family: Arial, sans-serif;
+
 
 body {
   margin: 0;
@@ -44,6 +31,7 @@ body {
   margin: 0 auto;
   padding: 20px;
 }
+
 
 .header {
   background-color: $primary-color;
@@ -60,6 +48,7 @@ body {
     margin: 5px 0;
   }
 }
+
 
 .navbar {
   background-color: $secondary-color;
@@ -90,6 +79,7 @@ body {
   }
 }
 
+
 .main-content {
   padding: 20px;
 
@@ -109,12 +99,37 @@ body {
     padding: 5px;
     border-radius: 5px;
   }
+
 }
 
-.btn-primary {
-  @include button-style($background-color, $text-color);
-}
+@mixin button-style($background-color, $text-color)  {
+    background-color: $background-color;
+    color: $text-color;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  
+    &:hover {
+      background-color: darken($background-color, 10%);
+    }
 
+    &:focus {
+        outline: none;
+      }
+    }
+  
+    .btn-primary {
+      @include button-style;
+      @include button-colors(#007bff, #ffffff);
+    }
+
+    @mixin fade-in-animation($duration: 0.5s) {
+      animation: fade-in $duration;
+    }
+    
 .footer {
   background-color: $primary-color;
   color: #fff;
@@ -126,3 +141,8 @@ body {
     margin: 0;
   }
 }
+
+
+
+
+

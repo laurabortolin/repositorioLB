@@ -1,0 +1,22 @@
+@mixin fade-in-animation($duration: 0.5s) {
+    animation: fade-in $duration;
+}
+  
+@mixin button-style($background-color, $text-color){
+    background-color: $background-color;
+    color: $text-color;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    
+    &:hover {
+        background-color: darken($background-color, 10%);
+    }
+  
+    &:focus {
+        outline: none;
+    }
+}

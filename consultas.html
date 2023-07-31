@@ -36,7 +36,6 @@
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="/resenas.html">Reseñas</a>
-                </li>
               </ul>
             </div>
           </div>
@@ -44,17 +43,27 @@
     </header>
 
     <div class="container">
-      <h1>Espectacular estudio sobre el lago</h1>
-      <h1>Lakeview Bariloche</h1>
-      <p>Estudio Patagonia</p>
-      <div class="row">
-        <div class="col-md-6">
-          <img src="images/lv_5.jpg" alt="Imagen 5" class="img-fluid">
+      <h1>Consultas</h1>
+      <div class=""></div>
+      <form class="consultas" name="consultas" action="#" method="post">
+        <div class="mb-3">
+            <label for="nombre" class="form-label">Nombre y Apellido</label>
+            <input type="text" class="form-control" id="nombre" name="nombre">
         </div>
-        <div class="col-md-6">
-          <img src="images/lv_8.jpg" alt="Imagen 8" class="img-fluid">
+        <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" name="email">
         </div>
-      </div>
+        <div class="mb-3">
+            <label for="comentario" class="form-label">Comentario</label>
+            <textarea class="form-control"></textarea>
+        </div>
+        <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="suscripcion">
+            <label class="form-check-label" for="suscripcion">Suscribirme al newsletter</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+      </form>
     </div>
 
     <footer>
